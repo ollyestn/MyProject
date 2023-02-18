@@ -69,3 +69,7 @@ void AMySplineActor::SetSplinePoints(const TArray<FVector>& SplinePoints)
 }
 
 
+void AMySplineActor::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
+{
+    Spline->UpdateSpline();
+}
