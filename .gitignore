@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# ue5
+.vs/
+Binaries/
+DerivedDataCache/
+Saved/
