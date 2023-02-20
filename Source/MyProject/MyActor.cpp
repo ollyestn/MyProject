@@ -125,15 +125,16 @@ void AMyActor::CreateSplineActor()
 
 	TArray<FVector> WallPointList;
 
-	FVector v1 = FVector(0, 0, 200);
-	FVector v2 = FVector(1000, 0, 200);
-	FVector v3 = FVector(1000, 1000, 200);
+	FVector v1 = FVector(0, 0, 0);
+	FVector v2 = FVector(0, 0, 1000);
+	FVector v3 = FVector(0, 0, 2000);
 	WallPointList.Add(v1); WallPointList.Add(v2); WallPointList.Add(v3);
 
 	AMySplineActor* pSplineActor = GetWorld()->SpawnActorDeferred<AMySplineActor>(AMySplineActor::StaticClass(), SpawnTransform); //SplineClass
 	if (pSplineActor)
 	{
 		pSplineActor->SetSplinePoints(WallPointList);
-		UGameplayStatics::FinishSpawningActor(pSplineActor, SpawnTransform);
+		pSplineActor->SplineStaticMesh = SplineStaticMesh;
+		UGameplayStatics::FinishSpawningActor(pSplineActor, SpawnTransform);		
 	}
 }

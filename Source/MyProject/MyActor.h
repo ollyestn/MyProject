@@ -30,6 +30,11 @@ public:
 	void GenerateSplineMeshComponentFromSplineComponent(AActor* parentActor, USplineComponent* splineComponent);
 
 public:
+	//线条使用的静态mesh
+	UPROPERTY(EditAnywhere, Category = "Spline", meta = (AllowPrivateAccess = true))
+		class UStaticMesh* SplineStaticMesh;
+
+public:
 	UFUNCTION(BlueprintCallable, Category = "SpatialGrid,BlueprintFunc")
 		void CreateSpline();
 

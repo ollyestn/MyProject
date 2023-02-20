@@ -31,7 +31,7 @@ public:
 
     virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
 
-protected:
+public:
 
     //线条组件
     UPROPERTY(VisibleDefaultsOnly, Category = "Spline", meta = (AllowPrivateAccess = true))
