@@ -7,7 +7,7 @@ A UE5 First Person Project
 	CreateSplineActor()
 	蓝图可调用方法，用于生成ASplineActor类的实例。
 	
-2、class ASplineActor:
+2、class ASplineActor:	
 	SetSplinePoints ():	设置Spline的顶点
 	CreateSplineMesh(): 生成线条Mesh
 	
